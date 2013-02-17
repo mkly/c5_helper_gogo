@@ -10,15 +10,17 @@
  */
 defined('C5_EXECUTE') or die('Access Denied');
 
-class GoHelper {
-	public static function go($elements) {
-		$view = View::getInstance();
-		foreach($elements as $el) {
-			if(strpos($el, '<') === 0) {
-				echo $el;
-				continue;
-			}
-			$view->inc("elements/$el.php");
-		}
-	}
+class GoHelper
+{
+    public static function go($elements)
+    {
+        $view = View::getInstance();
+        foreach($elements as $el) {
+            if(strpos($el, '<') === 0) {
+                echo $el;
+                continue;
+            }
+            $view->inc("elements/$el.php");
+        }
+    }
 }
