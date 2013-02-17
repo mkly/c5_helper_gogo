@@ -6,7 +6,7 @@ Gogo is a simple library that makes throwing together a quick theme a little qui
 #### Example Usage
 
     Loader::helper('go')->go(array(
-        '<!DOCTYPE>',
+        '<!DOCTYPE HTML>',
         '<html lang="en">',
         'head',
         '<body>',
