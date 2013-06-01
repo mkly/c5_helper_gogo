@@ -12,7 +12,7 @@ defined('C5_EXECUTE') or die('Access Denied');
 
 class GoHelper
 {
-    public static function go($elements)
+    public static function go($elements, $args = array())
     {
         $view = View::getInstance();
         foreach($elements as $el) {
@@ -20,7 +20,7 @@ class GoHelper
                 echo $el;
                 continue;
             }
-            $view->inc("elements/$el.php");
+            $view->inc("elements/$el.php", $args);
         }
     }
 }
